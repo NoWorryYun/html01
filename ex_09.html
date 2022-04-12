@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+	</head>
+	
+	<!--
+		입력 받는 애들은 뭉틍그려서 form태그라고 함
+		input은 값을 받아내기 위한 장치 type, checkbox, radio 등등
+		id는 이름, name은 구분하기 위한 값<서버에 보낼 때 '서버에서 구분'하기 위해서, id는 '태그를 구분'하기 위해 사용
+		value는 사용자가 입력한 값 혹은 입력할 값이 value로 들어감 // 속성은 순서 상관없음
+		id는 똑같은 이름이 있으면 안됨. value에 값이 쓰여있으면 표현되어있어짐 지금은 안배우고 후에 개발배울때 다시 배울거
+		서버에 클라이언트가 요청하면 서버에서 응답을 하는 것
+		hidden은 사용자가 안보이게 하는건데 사용자에겐 필요없지만 개발자가 필요한 정보를 받기위해서 사용
+	-->
+	<body>	
+		<h1>html5</h1>
+		<h2>기본태그</h2>
+		<h3>폼태그</h3>
+	
+		<form> <!-- action="to where(위치)" method="post or get(둘 중 정함)" -->
+			<label for="txt-hp">전화번호</label>
+			<input id="txt-hp" type="text" name="hp" value="" placeholder="전화번호를 입력해주세요">
+				
+			<br>
+			<br>		
+					
+			<label for="txt-nick">닉네임</label>
+			<input id="txt-nick" type="text" name="nick" value="" placeholder="ID">
+				
+			<br>
+			<br>	
+						
+			<label for="txt-pw">패스워드</label>
+			<input id="txt-pw" type="password" name="pw" value="" placeholder="문자/숫자/특수기호포함 최소8자리">
+				
+			<br>
+			<br>	
+						
+			<!-- type="hidden"은 눈에안보임 -->
+			여기 숨어있음(hidden)<input type="hidden" name="b-id" value="3">
+				
+			<br>
+			<br>	
+						
+			<!-- type="file"은 보안상 이유로 인하여 바꿀 수 있는 영역이 굉장히 적음 바꾸려면 굉장히 많은 노력이 필요함 꼼수를 써야해서-->
+			<label for="profile">프로필사진</label>			
+			<input id="profile" type="file" name="file">
+				
+			<br>
+			<br>
+			
+			<!--  checked되면 check된 상태로 보여지지만 화면상 체크를 풀면 푼 상태로 넘어감. 항상 체크되어있는것이 아님 -->
+			<label for="chk-reading">독서</label>
+			<input id="chk-reading" type="checkbox" name="hobby" value="reading">
+			
+			<label for="chk-music">음악</label>
+			<input id="chk-music" type="checkbox" name="hobby" value="music">
+			
+			<label for="chk-trip">여행</label>
+			<input id="chk-trip" type="checkbox" name="hobby" checked="checked" value="trip">
+			
+			<br>
+			<br>
+			
+			<label for="chk-dog">갱얼쥐</label>
+			<input id="chk-dog" type="checkbox" name="pet" value="dog" checked="checked">
+			
+			<label for="chk-cat">고먐미</label>
+			<input id="chk-cat" type="checkbox" name="pet" value="cat">
+			
+			<label for="chk-bird">새</label>
+			<input id="chk-bird" type="checkbox" name="pet" value="bird">
+				
+			<br>
+			<br>
+			
+			<label for="rdo-apple">사과를 주면서 사과를 하나</label>
+			<input id="rdo-apple" type="radio" name="fruit" value="apple" checked="checked">
+			
+			<label for="rdo-grape">포도 청 포도</label>
+			<input id="rdo-grape" type="radio" name="fruit" value="grape">
+		
+			<label for="rdo-orange">오렌지 먹은지 얼마나 오렌지</label>
+			<input id="rdo-orange" type="radio" name="fruit" value="orange">
+			
+			<br>
+			<br>
+				
+			<label for="rdo-january">1월</label>
+			<input id="rdo-january" type="radio" name="month" value="january" checked="checked">
+			
+			<label for="rdo-feburary">2월</label>
+			<input id="rdo-freburary" type="radio" name="month" value="feburary">
+		
+			<label for="rdo-march">3월</label>
+			<input id="rdo-march" type="radio" name="month" value="march">
+					
+		<br>
+		<br>
+
+			<label for="sel-telecom">통신사</label>
+			<select id="sel-telecom" name="telecom">
+				<option value="" selected="selected">통신사를 선택해주세요</option>
+				<option value="KT">KT</option>
+				<option value="SKT">SK텔레콤</option>				
+				<option value="LGU+">LGU+</option>
+				<option value="etc">기타</option>	
+			</select>
+
+		<br>
+		<br>
+
+		<!-- textarea는 value가 따로 존재하지 않음 > 열고 닫는 태그기때문에 태그 안쪽에 써 주면 됨
+				textarea는 태그 안쪽의 공백/여백이 유의미함. enter나 space bar가 창에 입력되버림-->
+
+			<textarea name="content">안녕하세요 게시판 입니다.</textarea>
+		
+		<br>
+		<br>			
+		
+			<!-- 제출버튼을 만들때는 button으로 만드는게 좋음.
+				input은 나중에 이미지외에 다른 태그를 넣기가 힘들지만 button은 사이에 다른걸 사용할 수 있기 때문에 button추천-->
+				
+			<!-- <input type="submit" value="회원가입"> -->
+			<button type="submit">회원가입</button>
+		
+		</form>
+			
+			
+			
+	</body>
+</html>
